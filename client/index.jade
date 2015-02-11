@@ -3,34 +3,39 @@ html(lang='en')
   head
     meta(charset='utf-8')
     title Prototype
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
     link(rel="stylesheet" href="/style.css")
   body
-    h1 Simple Calc
-    #wrapper
-      #screen 0
-      #buttons
-        #row1.row
-          button(type="submit")#clear.button Clear
-        #row2
-          button(type="submit")#num7.button 7
-          button(type="submit")#num8.button 8
-          button(type="submit")#num9.button 9
-          button(type="submit")#calc-plus.button +
-          button(type="submit")#calc-minus.button -
-        #row3.row
-          button(type="submit")#num4.button 4
-          button(type="submit")#num5.button 5
-          button(type="submit")#num6.button 6
-          button(type="submit")#calc-mult.button *
-          button(type="submit")#calc-div.button /
-        #row4.row
-          button(type="submit")#num1.button 1
-          button(type="submit")#num2.button 2
-          button(type="submit")#num3.button 3
-          button(type="submit")#calc-equal.button =
-        #row5.row
-          button(type="submit")#num0.button 0
-          button(type="submit")#dot.button .
-          button(type="submit")#sign.button @
+    .container
+      .row#row1
+        .col-xs-3#clear.top-button.button C
+        .col-xs-9#screen.top-button 0
+      .row#row2
+        .row.text-center
+          .col-xs-3#num7.button.number 7
+          .col-xs-3#num8.button.number 8
+          .col-xs-3#num9.button.number 9
+          .col-xs-3.calc.button +
+        .row.text-center
+          .col-xs-3#num4.button.number 4
+          .col-xs-3#num5.button.number 5
+          .col-xs-3#num6.button.number 6
+          .col-xs-3.calc.button -
+        .row.text-center
+          .col-xs-3#num1.button.number 1
+          .col-xs-3#num2.button.number 2
+          .col-xs-3#num3.button.number 3
+          .col-xs-3.calc.button /
+        .row.text-center
+          .col-xs-3#num0.button 0
+          .col-xs-3#dot.button .
+          .col-xs-3.calc.power.button ^2
+          .col-xs-3.calc.button *
+        .row.text-center
+          .col-xs-3.calc.opp.button &plusmn;
+          .col-xs-3.calc.root.button &#8730;
+          .col-xs-6.calc.button =
+          
+          
     script(src='/vendor/jquery/dist/jquery.js')
     script(src="/main.js")
